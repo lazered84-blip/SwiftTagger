@@ -1,0 +1,52 @@
+plugins {
+    id 'fabric-loom' version '1.14.5'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Modrinth'
+                url = 'https://api.modrinth.com/maven'
+            }
+        }
+        filter { includeGroup 'maven.modrinth' }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // API uniquement : le joueur n'a pas besoin de Mod Menu pour charger OurTiers.
+    modCompileOnly "maven.modrinth:mOgUt4GM:Tyk71iSw"
+
+    // Cloth Config : bibliothèque réellement utilisée à l'exécution pour
+    // construire l'écran de configuration (voir SwiftTaggerConfigScreen).
+    // Contrairement à Mod Menu ci-dessus, ce n'est PAS optionnel : le joueur
+    // doit avoir Cloth Config installé (voir "depends" dans fabric.mod.json).
+    modImplementation "maven.modrinth:cloth-config:21.11.153+fabric"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}

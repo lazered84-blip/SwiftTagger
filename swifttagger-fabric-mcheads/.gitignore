@@ -1,0 +1,24 @@
+# IntelliJ IDEA
+
+.idea/
+*.iml
+/shelf/
+/.idea/workspace.xml
+/httpRequests/
+/queries/
+/dataSources/
+/dataSources.local.xml
+
+# Gradle
+
+.gradle/
+build/
+
+# Fabric / Minecraft
+
+run/
+
+# Compiled files
+
+out/
+*.class
