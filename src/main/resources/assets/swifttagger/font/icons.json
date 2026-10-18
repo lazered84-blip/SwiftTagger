@@ -1,0 +1,12 @@
+{
+  "providers": [
+    { "type": "bitmap", "file": "swifttagger:font/icon_axe.png",           "ascent": 8, "height": 9, "chars": ["🪓"] },
+    { "type": "bitmap", "file": "swifttagger:font/icon_mace.png",          "ascent": 8, "height": 9, "chars": ["🔨"] },
+    { "type": "bitmap", "file": "swifttagger:font/icon_netherite_pot.png", "ascent": 8, "height": 9, "chars": ["☠"] },
+    { "type": "bitmap", "file": "swifttagger:font/icon_diamond_pot.png",   "ascent": 8, "height": 9, "chars": ["⚗"] },
+    { "type": "bitmap", "file": "swifttagger:font/icon_smp.png",           "ascent": 8, "height": 9, "chars": ["⛨"] },
+    { "type": "bitmap", "file": "swifttagger:font/icon_sword.png",         "ascent": 8, "height": 9, "chars": ["🗡"] },
+    { "type": "bitmap", "file": "swifttagger:font/icon_uhc.png",           "ascent": 8, "height": 9, "chars": ["❤"] },
+    { "type": "bitmap", "file": "swifttagger:font/icon_vanilla.png",       "ascent": 8, "height": 9, "chars": ["✦"] }
+  ]
+}

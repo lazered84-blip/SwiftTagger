@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.example.swifttagger.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "NametagMixin",
+    "TabListMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
